@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GCD Finder</title>
+  </head>
+  <body>
+    <script >
+      function gcd(form)
+      {
+
+        var fnum = form.fnum.value;
+        var snum = form.snum.value;
+        var gcd=1;
+        for(var i=2;i<=fnum*snum;i++)
+        {
+          if((fnum%i==0)&&(snum%i==0))
+          {
+            gcd=i;
+          }
+        }
+        document.write("GCD of the entered numbers is: ");
+        document.write(gcd);
+      }
+    </script>
+    <h1>GCD of two numbers</h1>
+    <br>
+    <p>Please enter the two numbers you want to compute GCD for in the below form and click submit to find the GCD.</p>
+    <br>
+<form>
+  <label for="fnum">First Number: </label>
+  <input type="text" name="fnum">
+<br>
+<br>
+<label for="snum">Second Number: </label>
+<input type="text" name="snum">
+<br>
+<br>
+<input type="button"  value="Submit" onclick="gcd(form)">
+</form>
+  </body>
+</html>

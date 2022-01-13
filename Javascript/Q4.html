@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Information</title>
+    
+  </head>
+  <body>
+    <script >
+    class User {
+            constructor(name,address,phonenum,email,edu,age)
+            {
+              this.name = name;
+              this.address = address;
+              this.phonenum = phonenum;
+              this.email = email;
+              this.edu = edu;
+              this.age = age;
+            }
+          }
+      function display(form)
+      {
+
+        var name = form.name.value;
+        var address = form.address.value;
+        var phonenum = form.phonenum.value;
+        var email = form.email.value;
+        var edu = form.edu.value;
+        var age = form.age.value;
+
+        var person1 = new User(name,address,phonenum,email,edu,age);
+
+        document.getElementById("mytable").style.display = "block";
+        document.getElementById("mytable").rows[0].cells[1].innerHTML=person1.name;
+        document.getElementById("mytable").rows[1].cells[1].innerHTML=person1.address;
+        document.getElementById("mytable").rows[2].cells[1].innerHTML=person1.phonenum;
+        document.getElementById("mytable").rows[3].cells[1].innerHTML=person1.email;
+        document.getElementById("mytable").rows[4].cells[1].innerHTML=person1.edu;
+        document.getElementById("mytable").rows[5].cells[1].innerHTML=person1.age;
+
+
+
+      }
+    </script>
+    <h1>User Information</h1>
+    <br>
+    <p>Please fill the below form and click the submit button to view the submitted information.</p>
+    <br>
+<form>
+  <label for="name">Name: </label>
+  <input type="text" name="name">
+  <br>
+  <br>
+  <label for="address">Address: </label>
+  <input type="text" name="address">
+<br>
+<br>
+<label for="phonenum">Phone Number: </label>
+<input type="text" name="phonenum">
+<br>
+<br>
+<label for="email">Email ID: </label>
+<input type="email" name="email">
+<br>
+<br>
+<label for="edu">Educational Qualifications: </label>
+<input type="text" name="edu">
+<br>
+<br>
+  <label for="age">Age: </label>
+  <input type="text" name="age">
+<br>
+<br>
+<input type="button"  value="Submit" onclick="display(form)">
+</form>
+<br>
+<br>
+<table id="mytable" style="display:none">
+  <tr bgcolor="grey">
+    <td >User.Name</td>
+    <td id="inplet">Hlo</td>
+  </tr>
+  <tr bgcolor="lightgrey">
+    <td>User.Address</td>
+    <td>Not Entered</td>
+  </tr>
+  <tr bgcolor="grey">
+    <td>User.Phone Number</td>
+    <td>Not Entered</td>
+  </tr>
+  <tr bgcolor="lightgrey">
+    <td>User.EmailID</td>
+    <td>Not Entered</td>
+  </tr>
+  <tr bgcolor="grey">
+    <td>User.Educational Qualifications  </td>
+    <td>Not Entered</td>
+  </tr>
+  <tr bgcolor="lightgrey">
+    <td>User.Age</td>
+    <td>Not Entered</td>
+  </tr>
+</table>
+  </body>
+</html>

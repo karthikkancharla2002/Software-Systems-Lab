@@ -1,0 +1,9 @@
+body{
+  text-align:left;
+}
+table,th,td,tr{
+  border: 1px Solid Blue;
+  width: 400px;
+  border-spacing:0.8px;
+  padding: 5px;
+}

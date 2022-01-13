@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Palindrome Checker</title>
+  </head>
+  <body>
+    <script>
+      function palin_check(form)
+      {
+        var str = form.word.value;
+        var len = str.length;
+        var check = 1;
+        for( var i=0;i<len/2;i++)
+        {
+          if(str[i] != str[len-i-1])
+          {
+            check = 0;
+          }
+        }
+        if(check == 0)
+        {
+          alert("Sorry entered word is not a Palindrome")
+        }
+        if(check == 1)
+        {
+          alert("Congrats entered word is a Palindrome");
+        }
+      }
+    </script>
+    <h1>Palindrome Checker</h1>
+    <br>
+    <form>
+      <label for="word">Please enter the Word or a String: </label>
+      <br>
+      <br>
+      <input type="text" name="word" >
+      <input type="button"  value="Submit" onclick="palin_check(form)">
+    </form>
+  </body>
+</html>

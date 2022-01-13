@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drivers License Eligibility</title>
+  </head>
+  <body>
+    <script >
+      function license_check(form)
+      {
+        var age = form.age.value; 
+        if(age >=18 && age<=100)
+        {
+          alert("You are eligible!");
+        }
+        else
+        {
+          alert("Sorry you are not eligible for the Drivers License");
+        }
+
+      }
+    </script>
+    <h1>Drivers License Eligibility Check</h1>
+    <br>
+    <p>Please fill the below form and click the submit button to know your eligibility of drivers license.</p>
+    <br>
+<form>
+  <label for="age">Age: </label>
+  <input type="text" name="age">
+<br>
+<br>
+<input type="button"  value="Submit" onclick="license_check(form)">
+</form>
+  </body>
+</html>

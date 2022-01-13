@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Most Frequent Occurences</title>
+  </head>
+  <body>
+    <script >
+      function most_freq(form)
+      {
+        var str = form.str.value;
+        var arr = str.split(",");
+        var slen = arr.length;
+        var store=[];
+        for(var i=0;i<slen;i++)
+        {
+          store[i] = 0;
+        }
+        for(var i=0;i<slen;i++)
+        {
+          for(var j=0;j<slen;j++)
+          {
+            if(arr[j]==arr[i])
+            {
+              store[i] = store[i]+1;
+            }
+          }
+        }
+        var imax;
+        imax = 0;
+        for(var i=0;i<slen;i++)
+        {
+          if(store[i]>store[imax])
+          {
+            imax = i;
+          }
+        }
+
+
+          //document.write("Most Frequent Character: "+arr[imax]);
+          //document.write("<br>");
+
+          //document.write(" Number of Occurences: "+store[imax]);
+          document.getElementById("lest").style.display = "block";
+          document.getElementById("inplet").innerHTML = str;
+          document.getElementById("mfc").innerHTML = "Most Frequent character: "+arr[imax];
+          document.getElementById("noc").innerHTML = "Number of occurences: "+store[imax];
+
+
+      }
+    </script>
+    <h1>Most Frequent Occurences</h1>
+    <br>
+    <p>Please enter the input string to get most frequently occured character and number of occurences of that.</p>
+    <br>
+<form>
+  <label for="str">Give your String input separated by commas "," : </label>
+  <input type="text" name="str">
+<br>
+<br>
+<input type="button"  value="Submit" onclick="most_freq(form)">
+</form>
+<br>
+<br>
+<div id = "lest" style="display:none">
+  <ul style="list-style-type:circle">
+    <li>Input</li>
+    <ul style="list-style-type:square">
+      <li id = "inplet">hlo</li>
+    </ul>
+    <li>Output</li>
+    <ul style="list-style-type:square">
+      <li id = "mfc">hlo</li>
+      <li id = "noc">hlo</li>
+    </ul>
+  </ul>
+</div>
+  </body>
+</html>
